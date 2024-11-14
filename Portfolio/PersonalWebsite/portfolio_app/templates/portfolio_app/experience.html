@@ -1,0 +1,79 @@
+{% extends "portfolio_app/base.html" %}
+{% load static %}
+{% block title %}Experience{% endblock %}
+
+{% block content %}
+
+<body class="bg-gray-100">
+    <div class="bg-violet-100 text-white p-8 pt-20">
+        <!-- Hero Section -->
+        <section class="text-center mb-20">
+            <a href="" class="inline-flex items-center px-6 py-3 bg-violet-600 text-white font-semibold rounded-full hover:bg-amber-300 transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                <span class="kt-btn-inner-text">Start Building Your Online Portfolio</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5-5 5M6 12h12" />
+                </svg>
+            </a>
+            <p class="mt-4 text-lg">Discover my journey, projects, and what I bring to the table.</p>
+        </section>
+
+        <!-- Experience Highlights -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div class="relative bg-violet-300 p-6 rounded-lg">
+                <img src="https://pbs.twimg.com/profile_images/1812803795664908288/m_3fJgWQ_400x400.jpg" alt="logo 1" class="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-24 h-24 object-cover rounded-full border-4 border-violet-600">
+                <div class="mt-16 text-center">
+                    <h2 class="text-lg font-semibold">Tuwaiq Academy</h2>
+                    <p class="mt-2 text-gray-500">Short description of the project or experience.</p>
+                    <i class="fas fa-check-circle text-violet-400 mt-2"></i>
+                </div>
+            </div>
+            
+            <div class="relative bg-sky-200 p-6 rounded-lg">
+                <img src="https://avatars.githubusercontent.com/u/56897604?v=4" alt="logo 2" class="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-24 h-24 object-cover rounded-full border-4 border-violet-600 bg-white">
+                <div class="mt-16 text-center">
+                    <h2 class="text-lg font-semibold">Cube Master</h2>
+                    <p class="mt-2 text-gray-500">Short description of the project or experience.</p>
+                    <i class="fas fa-check-circle text-violet-400 mt-2"></i>
+                </div>
+            </div>
+            
+            <div class="relative bg-amber-100 p-6 rounded-lg">
+                <img src="https://pbs.twimg.com/profile_images/1536374884363796486/2moWzRXu_400x400.jpg" alt="logo 3" class="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-24 h-24 object-cover rounded-full border-4 border-violet-600">
+                <div class="mt-16 text-center">
+                    <h2 class="text-lg font-semibold">Center Of Digital Entrepreneurship</h2>
+                    <p class="mt-2 text-gray-500">Short description of the project or experience.</p>
+                    <i class="fas fa-check-circle text-violet-400 mt-2"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendation Letter Section -->
+        <section class="bg-violet-950 text-white p-8 rounded-lg mb-12">
+            <h2 class="text-2xl font-bold text-center mb-4">Recommendation Letters</h2>
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+                <div class="flex-shrink-0 mb-4 md:mb-0">
+                    <img src="https://resumegenius.com/wp-content/uploads/2019/03/letters.svg" alt="Recommendation Icon" class="mr-4">
+                </div>
+                <div class="flex-1">
+                    <p class="text-center md:text-left">I am honored to share my recommendation letters from esteemed colleagues who value my work ethic and contributions. Their insights reflect my commitment to excellence in every project.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <h3 class="font-semibold text-lg">View Letter 1</h3>
+                    <p class="text-gray-500">Click to view the first letter.</p>
+                    <a href="{{ portfolio_item_1.link }}" target="_blank" class="mt-2 inline-block px-4 py-2 bg-violet-600 hover:bg-violet-700 rounded transition">Open PDF</a>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <h3 class="font-semibold text-lg">View Letter 2</h3>
+                    <p class="text-gray-500">Click to view the second letter.</p>
+                    <a href="{{ portfolio_item_2.link }}" target="_blank" class="mt-2 inline-block px-4 py-2 bg-violet-600 hover:bg-violet-700 rounded transition">Open PDF</a>
+                </div>
+            </div>
+
+        </section>
+
+        
+    </div>
+
+{% endblock %}

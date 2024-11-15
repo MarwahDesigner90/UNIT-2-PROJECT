@@ -6,93 +6,98 @@
 
 <style>
     .typewriter {
-      font-family: monospace;
-      font-size: 24px;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid;
-      /* width: 0; */
-      animation: caret 1s steps(1) infinite;
+        font-family: monospace;
+        font-size: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        /* width: 0; */
+        animation: caret 1s steps(1) infinite;
     }
 
     @keyframes caret {
-      50% {
-        border-color: transparent;
-      }
+        50% {
+            border-color: transparent;
+        }
     }
-  </style>
+</style>
 
 <section id="hero" class="snap-start">
-    <div class="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
-      <img class=" relative rounded-full h-32 w-32 mx-auto object-cover "
-        src="{%static 'images/Ellipse 1.png'%}" alt="">
-      <div class="z-20">
-        <h2 class="text-sm uppercase text-gray-500 pb-2 tracking-[10px] md:tracking-[15px]">Web Developer</h2>
-        <div id="typewriter" class="typewriter"></div>
-      </div>
+    <div class="border-double border-4 border-indigo-700 ">
+        <div class="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+            <img class=" relative rounded-full h-32 w-32 mx-auto object-cover " src="{%static 'images/Ellipse 1.png'%}"
+                alt="">
+            <div class="z-20">
+                <h2 class="text-sm uppercase text-gray-500 pb-2 tracking-[10px] md:tracking-[15px]">Web Developer</h2>
+                <div id="typewriter" class="typewriter"></div>
+            </div>
+        </div>
+        <main class="">
+            <div class="bg-home">
+            </div>
+
+            <div class="flex items-center max-w-4xl mx-auto bg-violet-950 text-white p-6 rounded-lg shadow-lg mt-60">
+                <div class="flex-1 pr-6">
+                    <h2 class="text-2xl font-bold text-amber-200  ">Here is a little background:</h2>
+                    <p class="mt-2 text-justify"> I'm Marwah Al-Ahmed, a recent graduate in Computer Science from King Faisal University. With a strong foundation in object-oriented programming and a year of experience in web development, I specialize as a full-stack developer and UI/UX designer. I am passionate about creating technical solutions that address real-world problems and aspire to excel in application development or technical project management.</p>
+                </div>
+                <div class="flex-shrink-0">
+                    <div class="w-15 h-15 rounded-full flex items-center justify-center shadow-md ">
+                        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/web-design-layout-3d-icon-download-in-png-blend-fbx-gltf-file-formats--wireframe-development-digital-marketing-pack-seo-icons-8103813.png" alt="Your Icon" class="w-3/4 h-auto">
+                    </div>
+                </div>
+            </main>
     </div>
-  </section>
+
+</section>
 <script>
-  
+
     function typeWriter(element, sentences, speed, pause) {
         let sentenceIndex = 0;
         let charIndex = 0;
-    
+
         function type() {
-          if (sentenceIndex < sentences.length) {
-            const currentSentence = sentences[sentenceIndex];
-            
-            if (charIndex < currentSentence.length) {
-              element.textContent += currentSentence.charAt(charIndex);
-              charIndex++;
-              setTimeout(type, speed);
-            } else {
-              charIndex = 0;
-              sentenceIndex++;
-    
-              if (sentenceIndex === sentences.length) {
-                sentenceIndex = 0; // Reset to loop
-              }
-              
-              setTimeout(() => {
-                element.textContent = ''; // Clear the previous sentence
-                type();
-              }, pause);
+            if (sentenceIndex < sentences.length) {
+                const currentSentence = sentences[sentenceIndex];
+
+                if (charIndex < currentSentence.length) {
+                    element.textContent += currentSentence.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, speed);
+                } else {
+                    charIndex = 0;
+                    sentenceIndex++;
+
+                    if (sentenceIndex === sentences.length) {
+                        sentenceIndex = 0; // Reset to loop
+                    }
+
+                    setTimeout(() => {
+                        element.textContent = ''; // Clear the previous sentence
+                        type();
+                    }, pause);
+                }
             }
-          }
         }
-        
+
         type();
-      }
-              
-    
-      const typewriterElement = document.getElementById('typewriter');
-      const sentences = [
+    }
+
+
+    const typewriterElement = document.getElementById('typewriter');
+    const sentences = [
         "Hi , My name is Marwah 🌟 ",
         "I like to walk around 🚶‍♀️ ",
         "I_Like_to_Coding 👩🏻‍💻 ",
         "And I'm addicted to coffee ☕️ "
-      ];
-      const typingSpeed = 100; // milliseconds per character
-      const pauseBetweenSentences = 1000; // milliseconds before starting the next sentence
-    
-      typeWriter(typewriterElement, sentences, typingSpeed, pauseBetweenSentences);
-    
-    </script>
+    ];
+    const typingSpeed = 100; // milliseconds per character
+    const pauseBetweenSentences = 1000; // milliseconds before starting the next sentence
 
-<main class="bg-violet-950 rounded-lg ">
+    typeWriter(typewriterElement, sentences, typingSpeed, pauseBetweenSentences);
 
-    <div class="flex items-center max-w-4xl mx-auto bg-violet-950 text-white p-6 rounded-lg shadow-lg mt-10">
-        <div class="flex-1 pr-6">
-            <h2 class="text-2xl font-bold text-amber-200  ">Here is a little background:</h2>
-            <p class="mt-2 text-justify"> I'm Marwah Al-Ahmed, a recent graduate in Computer Science from King Faisal University. With a strong foundation in object-oriented programming and a year of experience in web development, I specialize as a full-stack developer and UI/UX designer. I am passionate about creating technical solutions that address real-world problems and aspire to excel in application development or technical project management.</p>
-        </div>
-        <div class="flex-shrink-0">
-            <div class="w-15 h-15 rounded-full flex items-center justify-center shadow-md ">
-                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/web-design-layout-3d-icon-download-in-png-blend-fbx-gltf-file-formats--wireframe-development-digital-marketing-pack-seo-icons-8103813.png" alt="Your Icon" class="w-3/4 h-auto">
-            </div>
-        </div>
-    </main>
+</script>
+
 
 
 {% endblock %}

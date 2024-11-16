@@ -1,34 +1,117 @@
-/* .my-image{
-    display: flex;
-    position: relative;
-    border-radius: 50% ;
-    height: 100;
-    width: 32 ;
-    object-fit: cover;
-} */
-
-/* .bg-home{
-    background-image: url("static 'images/bg-grounded.png");
-    background:no-repeat;
-    /* background: hsl(from color h s l); */
-  
-/* } */
-
-.bg-home {
-
-    /* background-image: url("../images/bg-grounded.png"); */
-    background:no-repeat;
-    /* background: hsl(from color h s l); */
-    width: 5rem;
-    height: 5rem;
-    /* background-size: cover;
-    background-position: center; */
-    background-color: rgb(58, 114, 164);
-
+/* Container for the animated background */
+body{
+    background-color: #272142;
+    height: 100% !important;
+}
+/* type writter animation */
+.typewriter {
+    font-family: monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    /* width: 0; */
+    animation: caret 1s steps(1) infinite;
+    color: white;
 }
 
-/* .container {
-    width: 50%;
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+.animated-bg-container {
+    height: 100%; /* Use full viewport height */
+    width: 100%; /* Ensure full viewport width */
+    background-image: url('../images/bg-grounded.png'); /* Correct path */
+    
+    background-repeat: no-repeat;
+   
+    background-size: 105%; /* Adjust background size */
+    position: fixed; /* Keep the background fixed in place */
+    top: 300px;
+    left: 0;
+    z-index: -1; /* Ensure it stays behind the content */
+    /* Animation settings */
+    animation: animatedBackground 3s linear infinite alternate;
+}
+
+/* Centered content styling */
+.content {
+    text-align: center;
+    position: relative; /* Ensure content is layered on top of background */
+    z-index: 1;
+    padding-top: 200px; /* Adjust for spacing */
+}
+
+/* Button styling */
+.btn {
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Define the animation to move the background */
+@keyframes animatedBackground {
+    0% {
+        background-position: center left;
+    }
+    100% {
+        background-position: center right; /* Animation moves background up/down */
+    }
+}
+
+
+/* slider  */
+
+.swiper{
+    padding-bottom: -10rem;
+}
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  swiper-slide img {
+    display: block;
+    object-fit: contain;
+    width: 50% !important;
+    height: 50% !important;
+  }
+
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 50%;
     height: 50%;
-} */
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }

@@ -7,5 +7,6 @@ urlpatterns = [
     path("", views.home_view , name="home_view"),
     path("experience/", views.experience_view , name="experience_view"),
     path("skills/", views.skills_view , name="skills_view"),
+    path("add/experience/", views.add_experience_view , name="add_experience_view"),
     
 ]

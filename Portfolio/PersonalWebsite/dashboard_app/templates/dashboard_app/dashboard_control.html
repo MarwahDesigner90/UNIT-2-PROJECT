@@ -1,0 +1,91 @@
+{% extends "portfolio_app/base.html" %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="flex pt-20">
+    <!-- Sidebar -->
+    <div class="w-64 bg-gray-800 text-white h-screen">
+        <div class="p-4">
+            <h2 class="text-2xl font-semibold">Dashboard</h2>
+            <ul class="mt-8">
+                <li><a href="#portfolio" class="block py-2 px-4 hover:bg-gray-700">Portfolio Items</a></li>
+                <li><a href="#contact" class="block py-2 px-4 hover:bg-gray-700">Contact Submissions</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="flex-1 p-6">
+        <section id="portfolio">
+            <h2 class="text-2xl font-semibold mb-4">Portfolio Items</h2>
+            <div class="flex justify-between mb-4">
+                <a href="" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Add New Portfolio Item</a>
+                <input type="text" name="search" placeholder="Search..." class="px-4 py-2 border rounded">
+                <select name="order" class="px-4 py-2 border rounded">
+                    <option value="title">Order by Title</option>
+                    <option value="created_at">Order by Date</option>
+                </select>
+            </div>
+            <table class="min-w-full bg-white border">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b">Title</th>
+                        <th class="py-2 px-4 border-b">Description</th>
+                        <th class="py-2 px-4 border-b">Image</th>
+                        <th class="py-2 px-4 border-b">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in portfolio_items %}
+                    <tr>
+                        <td class="py-2 px-4 border-b">{{ item.title }}</td>
+                        <td class="py-2 px-4 border-b">{{ item.description }}</td>
+                        <td class="py-2 px-4 border-b"><img src="{{ item.image.url }}" alt="Image" class="w-16 h-16"></td>
+                        <td class="py-2 px-4 border-b">
+                            <a href="{% url 'dashboard:edit_portfolio' item.id %}" class="text-blue-500 hover:text-blue-700">Edit</a>
+                            <a href="{% url 'dashboard:delete_portfolio' item.id %}" class="ml-4 text-red-500 hover:text-red-700">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="mt-10">
+            <h2 class="text-2xl font-semibold mb-4">Contact Submissions</h2>
+            <div class="flex justify-between mb-4">
+                <input type="text" name="search" placeholder="Search..." class="px-4 py-2 border rounded">
+                <select name="order" class="px-4 py-2 border rounded">
+                    <option value="name">Order by Name</option>
+                    <option value="email">Order by Email</option>
+                </select>
+            </div>
+            <table class="min-w-full bg-white border">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b">Name</th>
+                        <th class="py-2 px-4 border-b">Service</th>
+                        <th class="py-2 px-4 border-b">Email</th>
+                        <th class="py-2 px-4 border-b">Message</th>
+                        <th class="py-2 px-4 border-b">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for contact in contact_submissions %}
+                    <tr>
+                        <td class="py-2 px-4 border-b">{{ contact.name }}</td>
+                        <td class="py-2 px-4 border-b">{{ contact.service }}</td>
+                        <td class="py-2 px-4 border-b">{{ contact.email }}</td>
+                        <td class="py-2 px-4 border-b">{{ contact.message|truncatewords:10 }}</td>
+                        <td class="py-2 px-4 border-b">
+                            <a href="{% url 'dashboard:edit_contact' contact.id %}" class="text-blue-500 hover:text-blue-700">Edit</a>
+                            <a href="{% url 'dashboard:delete_contact' contact.id %}" class="ml-4 text-red-500 hover:text-red-700">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+{% endblock %}

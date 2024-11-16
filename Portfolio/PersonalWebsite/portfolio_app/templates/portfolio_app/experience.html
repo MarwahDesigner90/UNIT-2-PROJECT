@@ -1,20 +1,17 @@
 {% extends "portfolio_app/base.html" %}
 {% load static %}
 {% block title %}Experience{% endblock %}
-
 {% block content %}
-
-<body class="bg-gray-100">
+<body class="bg-gray-100 ">
     <div class="bg-violet-100 text-white p-8 pt-20">
         <!-- Hero Section -->
-        <section class="text-center mb-20">
-            <a href="" class="inline-flex items-center px-6 py-3 bg-violet-600 text-white font-semibold rounded-full hover:bg-amber-300 transition-transform transform hover:scale-105 duration-300 ease-in-out">
-                <span class="kt-btn-inner-text">Start Building Your Online Portfolio</span>
+        <section class="text-center mb-20 pt-20">
+            <a href="" class="inline-flex items-center px-6 py-3 bg-violet-600 text-white font-semibold rounded-full hover:bg-amber-300 transition-transform transform hover:scale-105 duration-300 ease-in-out ">
+                <span class="kt-btn-inner-text ">Discover my journey, projects, and what I bring to the table</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5-5 5M6 12h12" />
                 </svg>
             </a>
-            <p class="mt-4 text-lg">Discover my journey, projects, and what I bring to the table.</p>
         </section>
 
         <!-- Experience Highlights -->
@@ -62,18 +59,14 @@
                 <div class="bg-white p-4 rounded-lg shadow-md text-center">
                     <h3 class="font-semibold text-lg">View Letter 1</h3>
                     <p class="text-gray-500">Click to view the first letter.</p>
-                    <a href="{{ portfolio_item_1.link }}" target="_blank" class="mt-2 inline-block px-4 py-2 bg-violet-600 hover:bg-violet-700 rounded transition">Open PDF</a>
+                    <a href="" target="_blank" class="mt-2 inline-block px-4 py-2 bg-violet-600 hover:bg-violet-700 rounded transition">Open PDF</a>
                 </div>
                 <div class="bg-white p-4 rounded-lg shadow-md text-center">
                     <h3 class="font-semibold text-lg">View Letter 2</h3>
                     <p class="text-gray-500">Click to view the second letter.</p>
-                    <a href="{{ portfolio_item_2.link }}" target="_blank" class="mt-2 inline-block px-4 py-2 bg-violet-600 hover:bg-violet-700 rounded transition">Open PDF</a>
+                    <a href="" target="_blank" class="mt-2 inline-block px-4 py-2 bg-violet-600 hover:bg-violet-700 rounded transition">Open PDF</a>
                 </div>
             </div>
-
         </section>
-
-        
     </div>
-
 {% endblock %}

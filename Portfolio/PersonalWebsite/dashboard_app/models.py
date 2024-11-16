@@ -1,3 +1,3 @@
 from django.db import models
-
-# Create your models here.
+# dashboard_app/models.py
+from portfolio_app.models import PortfolioItem

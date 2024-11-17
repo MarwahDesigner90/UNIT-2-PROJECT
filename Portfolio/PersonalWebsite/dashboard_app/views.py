@@ -1,27 +1,27 @@
 from django.shortcuts import render , redirect
 from django.http import HttpRequest , HttpResponse
-# from django.shortcuts import render, get_object_or_404, redirect
-# from .models import PortfolioItem
-# from .forms import PortfolioItemForm
-# from .forms import ContactSubmission
+from django.shortcuts import render, get_object_or_404, redirect
+from portfolio_app.models import PortfolioItem
+from contact_app.models import ContactSubmission
+from .forms import PortfolioItemForm, ContactForm
 
 # Create your views here.
 
 def dashboard_control_view(request:HttpRequest):
-    # query = request.GET.get('q')
-    # order = request.GET.get('order', 'created_at')  # Default order
+    query = request.GET.get('q')
+    order = request.GET.get('order', 'created_at')  # Default order
     
-    # portfolio_items = PortfolioItem.objects.all()
-    # contact_submissions = Contact.objects.all()
+    experiences = PortfolioItem.objects.all()
+    inquiries = ContactSubmission.objects.all()
 
-    # if query:
-    #     portfolio_items = portfolio_items.filter(title__icontains=query)
-    #     contact_submissions = contact_submissions.filter(name__icontains=query)
+    if query:
+        experiences = experiences.filter(title__icontains=query)
+        inquiries = inquiries.filter(name__icontains=query)
     
-    # portfolio_items = portfolio_items.order_by(order)
-    # contact_submissions = contact_submissions.order_by(order)
+    experiences = experiences.order_by('created_at')
+    inquiries = inquiries.order_by('submitted_at')
 
-    return render(request, "dashboard_app/dashboard_control.html")
+    return render(request, "dashboard_app/dashboard_control.html" , {"inquiries":inquiries, "experiences":experiences})
 
 # def create_item_view(request):
 #     if request.method == 'POST':

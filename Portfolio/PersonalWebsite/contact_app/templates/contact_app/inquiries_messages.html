@@ -5,22 +5,22 @@
     <h2 class="text-2xl font-semibold mb-4 text-white">Customer Inquiries</h2>
     <table class="min-w-full table-auto border-collapse border border-gray-300  bg-violet-200 mb-[100%]">
         <thead>
-            <tr>
-                <th class="py-2 px-4 border-b">Name</th>
-                <th class="py-2 px-4 border-b">Email</th>
-                <th class="py-2 px-4 border-b">Service</th>
-                <th class="py-2 px-4 border-b">Message</th>
-                <th class="py-2 px-4 border-b">Date Submitted</th>
+            <tr class="bg-violet-900">
+                <th class="py-2 px-4 border-b text-white">Name</th>
+                <th class="py-2 px-4 border-b text-white">Email</th>
+                <th class="py-2 px-4 border-b text-white">Service</th>
+                <th class="py-2 px-4 border-b text-white">Message</th>
+                <th class="py-2 px-4 border-b text-white">Date Submitted</th>
             </tr>
         </thead>
         <tbody>
             {% for inquiry in inquiries %}
             <tr>
-                <td class="py-2 px-4 border-b">{{ inquiry.name }}</td>
+                <td class="py-2 px-4 border-b text-blue-500">{{ inquiry.name }}</td>
                 <td class="py-2 px-4 border-b">{{ inquiry.email }}</td>
                 <td class="py-2 px-4 border-b">{{ inquiry.service}}</td>
                 <td class="py-2 px-4 border-b">{{ inquiry.message }}</td>
-                <td class="py-2 px-4 border-b">{{ inquiry.submitted_at }}</td>
+                <td class="py-2 px-4 border-b text-red-500">{{ inquiry.submitted_at }}</td>
             </tr>
             {% empty %}
             <tr>

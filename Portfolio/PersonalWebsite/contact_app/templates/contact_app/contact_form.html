@@ -5,7 +5,7 @@
  <!-- Booking Form Section -->
  <section class="h-screen flex flex-col justify-center bg-violet-100 items-center mb-2  ">
     <h2 class="text-2xl font-semibold mb-4">Book a Service</h2>
-    <form class="bg-white p-6 rounded-lg shadow-md items-center w-[80%]" action="{% url 'contact_app:inquiries_view'%}" method="post" enctype="multipart/form-data">
+    <form class="bg-white p-6 rounded-lg shadow-md items-center w-[80%]" action="{% url 'contact_app:contact_view'%}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>

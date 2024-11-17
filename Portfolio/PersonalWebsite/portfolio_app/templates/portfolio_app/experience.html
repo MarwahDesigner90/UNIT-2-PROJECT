@@ -14,36 +14,31 @@
             </a>
         </section>
 
-        <!-- Experience Highlights -->
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div class="relative bg-violet-300 p-6 rounded-lg">
-                <img src="https://pbs.twimg.com/profile_images/1812803795664908288/m_3fJgWQ_400x400.jpg" alt="logo 1" class="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-24 h-24 object-cover rounded-full border-4 border-violet-600">
+            {% for experience in experiences %}
+            
+            {% if experience.background_color == '#ddd6fe' %}
+                <div class="relative p-6 rounded-lg bg-violet-200">
+            {% elif experience.background_color == '#e0f2fe' %}
+                <div class="relative p-6 rounded-lg bg-sky-100">
+            {% elif experience.background_color == '#fef3c7' %}
+                <div class="relative p-6 rounded-lg bg-amber-100">
+            {% else %}
+                <div class="relative p-6 rounded-lg bg-gray-200">  <!-- Default color -->
+            {% endif %}
+            
+                <img src="{{ experience.image.url }}" alt="{{ experience.title }}" class="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-24 h-24 object-cover rounded-full border-4 border-violet-600">
                 <div class="mt-16 text-center">
-                    <h2 class="text-lg font-semibold">Tuwaiq Academy</h2>
-                    <p class="mt-2 text-gray-500">Short description of the project or experience.</p>
+                    <h2 class="text-lg font-semibold">{{ experience.title }}</h2>
+                    <p class="mt-2 text-gray-500">{{ experience.description }}</p>
                     <i class="fas fa-check-circle text-violet-400 mt-2"></i>
                 </div>
             </div>
             
-            <div class="relative bg-sky-200 p-6 rounded-lg">
-                <img src="https://avatars.githubusercontent.com/u/56897604?v=4" alt="logo 2" class="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-24 h-24 object-cover rounded-full border-4 border-violet-600 bg-white">
-                <div class="mt-16 text-center">
-                    <h2 class="text-lg font-semibold">Cube Master</h2>
-                    <p class="mt-2 text-gray-500">Short description of the project or experience.</p>
-                    <i class="fas fa-check-circle text-violet-400 mt-2"></i>
-                </div>
-            </div>
-            
-            <div class="relative bg-amber-100 p-6 rounded-lg">
-                <img src="https://pbs.twimg.com/profile_images/1536374884363796486/2moWzRXu_400x400.jpg" alt="logo 3" class="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-24 h-24 object-cover rounded-full border-4 border-violet-600">
-                <div class="mt-16 text-center">
-                    <h2 class="text-lg font-semibold">Center Of Digital Entrepreneurship</h2>
-                    <p class="mt-2 text-gray-500">Short description of the project or experience.</p>
-                    <i class="fas fa-check-circle text-violet-400 mt-2"></i>
-                </div>
-            </div>
+            {% empty %}
+            <p>No experiences available.</p>
+            {% endfor %}
         </section>
-
         <!-- Recommendation Letter Section -->
         <section class="bg-violet-950 text-white p-8 rounded-lg mb-12">
             <h2 class="text-2xl font-bold text-center mb-4">Recommendation Letters</h2>
@@ -69,4 +64,5 @@
             </div>
         </section>
     </div>
+</body>
 {% endblock %}

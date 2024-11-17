@@ -2,7 +2,7 @@
 {% block title %}Customer Inquiries{% endblock %}
 {% block content %}
 <section>
-    <h2 class="text-2xl font-semibold mb-4">Customer Inquiries</h2>
+    <h2 class="text-2xl font-semibold mb-4 bg-violet-100">Customer Inquiries</h2>
     <table class="min-w-full table-auto border-collapse border border-gray-300">
         <thead>
             <tr>
@@ -24,7 +24,7 @@
             </tr>
             {% empty %}
             <tr>
-                <td colspan="5" class="py-2 px-4 border-b text-center">No inquiries found.</td>
+                <td colspan="5" class="py-2 px-4 border-b text-center bg-violet-100 text-white">No inquiries found.</td>
             </tr>
             {% endfor %}
         </tbody>

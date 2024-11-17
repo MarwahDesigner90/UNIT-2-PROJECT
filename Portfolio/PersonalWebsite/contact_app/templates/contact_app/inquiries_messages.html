@@ -1,9 +1,9 @@
 {% extends "portfolio_app/base.html" %}
 {% block title %}Customer Inquiries{% endblock %}
 {% block content %}
-<section>
-    <h2 class="text-2xl font-semibold mb-4 bg-violet-100">Customer Inquiries</h2>
-    <table class="min-w-full table-auto border-collapse border border-gray-300">
+<section class="mt-40">
+    <h2 class="text-2xl font-semibold mb-4 text-white">Customer Inquiries</h2>
+    <table class="min-w-full table-auto border-collapse border border-gray-300  bg-violet-200 mb-[100%]">
         <thead>
             <tr>
                 <th class="py-2 px-4 border-b">Name</th>
@@ -18,8 +18,8 @@
             <tr>
                 <td class="py-2 px-4 border-b">{{ inquiry.name }}</td>
                 <td class="py-2 px-4 border-b">{{ inquiry.email }}</td>
-                <td class="py-2 px-4 border-b">{{ inquiry.get_service_display }}</td>
-                <td class="py-2 px-4 border-b">{{ inquiry.message|truncatewords:20 }}</td>
+                <td class="py-2 px-4 border-b">{{ inquiry.service}}</td>
+                <td class="py-2 px-4 border-b">{{ inquiry.message }}</td>
                 <td class="py-2 px-4 border-b">{{ inquiry.submitted_at }}</td>
             </tr>
             {% empty %}

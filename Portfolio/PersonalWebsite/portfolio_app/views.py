@@ -23,3 +23,15 @@ def add_experience_view(request:HttpRequest):
 
     return render(request, "portfolio_app/add_experience.html")
 
+def detail_experience_view(request:HttpRequest , experience_id:int):
+    experiences =PortfolioItem.objects.get(pk=experience_id)
+    return render(request, "portfolio_app/experience_detail.html", {"experiences" : experiences})
+
+
+def update_experience_view(request:HttpRequest , experience_id:int):
+
+    experiences =PortfolioItem.objects.get(pk=experience_id)
+    return render(request, "portfolio_app/update_experience.html", {"experiences" : experiences})
+
+
+

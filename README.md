@@ -1,75 +1,44 @@
-# UNIT-2-PROJECT
 
+## PORTFOLIO WEBSITE
 
-## Create a Personal Website
+### Overview
 
+The Portfolio Website is an interactive platform designed to showcase personal projects, skills, and professional experiences. It serves as a comprehensive hub for potential clients, employers, and collaborators to explore your work and capabilities. The website is organized into three main applications: **Portfolio App**, **Contact App**, and **Dashboard App**, each providing unique functionalities to enhance user experience.
 
-A personal website is website that represents you , your work , your career , your interests and so on. It could be highly stylish , fun, or simple, serious and so on. You choose how you represent yourself online !
+### User Stories
 
+As a user, I should be able to:
 
+- **Explore My Work**: Navigate through the **Portfolio App** to view my experiences, skills, and an "About Me" section that outlines my professional journey.
+- **Add New Experiences**: Use the **Add Experience** feature to submit my latest projects and achievements, enriching my portfolio.
+- **Connect with Me**: Access the **Contact App** to fill out a contact form, allowing visitors to reach out for inquiries or collaboration opportunities.
+- **Manage My Dashboard**: Utilize the **Dashboard App** to edit or delete experiences, ensuring my portfolio remains up-to-date and relevant.
 
-### Inspirations:
-- https://www.shanekinkennon.com
-- https://www.joshrubietta.com
-- https://www.jencarrington.com
-- https://www.amywutoo.com
-- https://www.ginakirlew.com
+### Usage
 
+To interact with the Portfolio Website, follow these instructions:
 
+1. **Navigate to the Site**: Open your web browser and enter the website URL.
+   
+2. **Explore the Portfolio**:
+   - Visit the **Experience** section to see detailed descriptions of my work.
+   - Check out the **Skills** section to discover the technologies and tools I am proficient in.
+   - Read the **About** page for insights into my background and professional philosophy.
 
-## Minumum Requirements
+3. **Add Experience**:
+   - Click on the **Add Experience** link to submit new projects. Fill out the form with relevant details and submit it to update your portfolio.
 
-- Use Django.
-- Use Templates & Template Inheritance.
-- Organize your project in apps as needed.
-- Use models to represent you data.
-- Use naming conventions.
-- Strive to make the user journey intuitive and complete.
-- At least 4 pages.
-- At least 2 models.
-- Must be responsive (looks good on big & small screens). 
-- You can use a CSS library to style your website (such as Bootstrap or equivalent)
-- You can use a cdn or a cloud storage to host large files such as large videos (example: Goolge Firebase Cloud Storage: https://firebase.google.com/docs/storage)
-- User Stories(shared as a link to document or added as a file).
-- Wireframe (shared as link or uploaded as a file) - You can use Figma or similar online wireframing/design software.
-- UML (shared as a link or uploaded as a file) - You can use Lucid Charts or similar online UML design tool.
+4. **Contact Me**:
+   - Go to the **Contact Form** in the **Contact App**.
+   - Fill out your name, email, and message, then submit to reach me directly with any inquiries.
 
-## (Project Name)
-(project description here.)
+5. **Manage Dashboard**:
+   - Access the **Dashboard App** to view a list of all experiences.
+   - Use the provided options to edit or delete entries as needed.
 
-## Features List
-- (list of features)
+### Examples of Actions
 
-## User Stories, Wireframes & UML links
-- (User stories document link here.)
-- (wireframe link here.)
-- (UML link here.)
-
-
-## Resources:
-
-### Free high quality images :
-- https://www.pexels.com/
-- https://unsplash.com
-
-
-
-
-### Free sounds website:
-- https://mixkit.co/
-
-### Free stock videos:
-- https://pixabay.com/videos/
-
-### Free Fonts:
-- https://fonts.google.com
-
-
-### CSS Library:
-- https://getbootstrap.com/
-- https://get.foundation/index.html
-- https://tailwindcss.com/
-
-### CSS Animation libraries:
-- https://animate.style
-- https://www.minimamente.com/project/magic/
+- To view my latest projects, navigate to the **Experience** section.
+- - To view my skills, navigate to the **skills** section.
+- To submit a new project, click on **Add Experience**, fill in the form, and hit submit.
+- To connect with me, fill out the contact form and send your message.

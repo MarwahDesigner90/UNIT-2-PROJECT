@@ -39,6 +39,6 @@ To interact with the Portfolio Website, follow these instructions:
 ### Examples of Actions
 
 - To view my latest projects, navigate to the **Experience** section.
-- - To view my skills, navigate to the **skills** section.
+- To view my skills, navigate to the **skills** section.
 - To submit a new project, click on **Add Experience**, fill in the form, and hit submit.
 - To connect with me, fill out the contact form and send your message.

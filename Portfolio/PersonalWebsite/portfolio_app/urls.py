@@ -10,5 +10,5 @@ urlpatterns = [
     path("add/experience/", views.add_experience_view , name="add_experience_view"),
     path("detail/<experience_id>/", views.detail_experience_view , name="detail_experience_view"),
     path("update/<experience_id>/",views.update_experience_view , name="update_experience_view"),
-    
+    path("delete/<experience_id>/",views.delete_experience_view , name="delete_experience_view"),
 ]

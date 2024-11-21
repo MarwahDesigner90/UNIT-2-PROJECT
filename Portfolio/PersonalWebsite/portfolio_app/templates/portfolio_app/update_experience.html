@@ -38,23 +38,24 @@
 <div class="h-screen flex flex-col justify-center">
     <div class="bg-violet-100 container_m">
         <h2 class="text-2xl text-white">Update Your Experience</h2>
-        <form method="post" enctype="multipart/form-data" action="{% url 'portfolio_app:add_experience_view' %}">
+        <form method="post" enctype="multipart/form-data" action="{% url 'portfolio_app:update_experience_view' experiences.id %}">
             {% csrf_token %}
             <div class="form-group">
                 <label for="image">Select Company Icon:</label>
-                <input type="file" name="image" accept="image/*" required>
+                <img class="updated_image" src="{{experiences.image.url}}" />
+                <input type="file" id="image" name="image" accept="image/*" required>
             </div>
             <div class="form-group">
                 <label for="title">Company Name:</label>
-                <input type="text" name="title" placeholder="Enter company name" required>
+                <input type="text" value="{{experiences.title}}" name="title" placeholder="Enter company name" required>
             </div>
             <div class="form-group">
                 <label for="description">Experience Description:</label>
-                <textarea name="description" placeholder="Enter your role and experience description" required></textarea>
+                <textarea name="description"  placeholder="Enter your role and experience description" required>{{experiences.description}} </textarea>
             </div>
             <div class="form-group">
                 <label for="background_color">Background Color (Hex):</label>
-                <input type="text" name="background_color" placeholder="#ffffff" value="#ffffff" required>
+                <input type="text" value="{{experiences.background_color}}" name="background_color" placeholder="#ffffff" value="#ffffff" required>
             </div>
             <button type="submit" class="btn_m bg-amber-300">Add Experience</button>
         </form>
